@@ -31,6 +31,7 @@ To:
         <allow send_destination="org.ofono"/>
     </policy>
 
+
 Run:
 ```sh
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
@@ -43,6 +44,7 @@ In `src/modules/bluetooth/backend-native.c`<p> and <\p>`src/modules/bluetooth/ba
 to:
     
     *imtu = 60;
+
 
 Run:
 ```sh
