@@ -2,7 +2,7 @@
 
 ## HFP server with ffpeg tunneling
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/scripting-drafts/Audio-Relay/)
 
 Runs on Raspbian 10 (32bit Debian Buster)
 
