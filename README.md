@@ -16,7 +16,7 @@ exit
 pip3 install meson)
 ```
 In `/etc/dbus-1/system.d/ofono.conf` modify:<b>
-    ``<policy context="default">``<\>
+    ``<policy context="default">``<\b>
         ``<deny send_destination="org.ofono"/>``
     ``</policy>``
 To:
