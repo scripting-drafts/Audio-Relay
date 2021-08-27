@@ -28,10 +28,7 @@ To:
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 ```
 
-In `src/modules/bluetooth/backend-native.c` and `src/modules/bluetooth/backend-ofono.c` change:
-``*imtu = 48;``
-To:
-``*imtu = 60;``
+In `src/modules/bluetooth/backend-native.c` and `src/modules/bluetooth/backend-ofono.c` change ``*imtu = 48;`` to ``*imtu = 60;``
 
 ```sh
 sudo apt-get build-dep pulseaudio
