@@ -15,8 +15,8 @@ exit
 //or just
 pip3 install meson)
 ```
-In `/etc/dbus-1/system.d/ofono.conf` modify:
-    ``<policy context="default">``
+In `/etc/dbus-1/system.d/ofono.conf` modify:<b>
+    ``<policy context="default">``<\>
         ``<deny send_destination="org.ofono"/>``
     ``</policy>``
 To:
@@ -37,7 +37,7 @@ cd pulseaudio
 ./bootstrap.sh && make && sudo make install && ldconfig
 ```
 
-Optionally limit profiles to HFP only in `/etc/pulse/default.pa` by adding:
+Optionally limit profiles to HFP only in `/etc/pulse/default.pa` by adding
 `.ifexists module-bluetooth-discover.so
 load-module module-bluetooth-discover headset=ofono
 .endif`
