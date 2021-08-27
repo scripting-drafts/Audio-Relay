@@ -25,7 +25,7 @@ In `/etc/dbus-1/system.d/ofono.conf` modify:
         <deny send_destination="org.ofono"/>
     </policy>
 
-To:
+to:
 
     <policy context="default">
         <allow send_destination="org.ofono"/>
@@ -37,7 +37,7 @@ Run:
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 ```
 
-In `src/modules/bluetooth/backend-native.c`<p> and <\p>`src/modules/bluetooth/backend-ofono.c` change
+In `src/modules/bluetooth/backend-native.c` and `src/modules/bluetooth/backend-ofono.c` change:
     
     *imtu = 48;
     
