@@ -17,14 +17,14 @@ or just
     
     pip3 install meson)
 
-In `/etc/dbus-1/system.d/ofono.conf` modify:<b>
-    ``<policy context="default">``<\b>
-        ``<deny send_destination="org.ofono"/>``
-    ``</policy>``
+In `/etc/dbus-1/system.d/ofono.conf` modify:
+    <policy context="default">
+        <deny send_destination="org.ofono"/>``
+    </policy>
 To:
-  ``<policy context="default">``
-        ``<allow send_destination="org.ofono"/>``
-  ``</policy>``
+    <policy context="default">
+        <allow send_destination="org.ofono"/>
+    </policy>
  
 ```sh
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
