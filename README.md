@@ -6,7 +6,7 @@
 
 Runs on [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
 
-(Enable developer sources in the ``/etc/apt/sources.list`` file by commenting out the lines starting with deb-src.)
+(Enable developer sources in the ``/etc/apt/sources.list`` file by commenting out the lines starting with deb-src)
 
 > sudo apt-get install pi-bluetooth ofono ninja (doxygen?)
 > (sudo -i
