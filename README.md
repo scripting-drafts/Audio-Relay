@@ -8,6 +8,8 @@ Runs on [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian
 
 (Enable developer sources in the ``/etc/apt/sources.list`` file by commenting out the lines starting with ``deb-src``)
 
+Run:
+
     sudo apt-get install pi-bluetooth ofono ninja (doxygen?)
     (sudo -i
     sudo pip3 install meson
@@ -18,20 +20,31 @@ or just
     pip3 install meson)
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:
+
     <policy context="default">
-        <deny send_destination="org.ofono"/>``
+        <deny send_destination="org.ofono"/>
     </policy>
+
 To:
+
     <policy context="default">
         <allow send_destination="org.ofono"/>
     </policy>
- 
+
+Run:
 ```sh
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 ```
 
-<p>In <\p>`src/modules/bluetooth/backend-native.c`<p> and <\p>`src/modules/bluetooth/backend-ofono.c`<p> change <br><\p>``*imtu = 48;`` <br>to <p><br><\p>``*imtu = 60;``
+In `src/modules/bluetooth/backend-native.c`<p> and <\p>`src/modules/bluetooth/backend-ofono.c` change
+    
+    *imtu = 48;
+    
+to:
+    
+    *imtu = 60;
 
+Run:
 ```sh
 sudo apt-get build-dep pulseaudio
 (sudo reboot)
@@ -39,7 +52,8 @@ cd pulseaudio
 ./bootstrap.sh && make && sudo make install && ldconfig
 ```
 
-Optionally limit profiles to HFP only in `/etc/pulse/default.pa` by adding
-`.ifexists module-bluetooth-discover.so
-load-module module-bluetooth-discover headset=ofono
-.endif`
+Optionally limit profiles to HFP only in `/etc/pulse/default.pa` by adding:
+
+    .ifexists module-bluetooth-discover.so
+    load-module module-bluetooth-discover headset=ofono
+    .endif
