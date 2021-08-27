@@ -12,8 +12,8 @@ Runs on [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian
     (sudo -i
     sudo pip3 install meson
     exit
-//or just
-        pip3 install meson)
+or just
+    pip3 install meson)
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:<b>
     ``<policy context="default">``<\b>
