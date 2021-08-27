@@ -8,12 +8,12 @@ Runs on [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian
 
 (Enable developer sources in the ``/etc/apt/sources.list`` file by commenting out the lines starting with deb-src)
 
-> sudo apt-get install pi-bluetooth ofono ninja (doxygen?)
-> (sudo -i
-> sudo pip3 install meson
-> exit
+    sudo apt-get install pi-bluetooth ofono ninja (doxygen?)
+    (sudo -i
+    sudo pip3 install meson
+    exit
 //or just
-> pip3 install meson)
+        pip3 install meson)
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:<b>
     ``<policy context="default">``<\b>
