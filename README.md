@@ -6,7 +6,8 @@
 
 Requirements:
  - [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
- - Raspberry Pi 3b or Zero W 
+ - Raspberry Pi 3b or Zero W
+ - 4gb micro sd card
 
 Start with:
 ```sh
