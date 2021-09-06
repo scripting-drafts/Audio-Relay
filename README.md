@@ -47,8 +47,6 @@ cd pulseaudio
 ./bootstrap.sh && make && sudo make install && ldconfig
 ```
 
-*
-
 Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
 
     .ifexists module-bluetooth-discover.so
@@ -56,7 +54,9 @@ Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
     .endif
 
 For multi-user usage:
+```sh
 sudo apt-mark hold *
+```
 
 ### Pending:
  - Make services for pulseaudio and ofono to run on boot:
