@@ -8,12 +8,14 @@ Requirements:
  - [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
  - Raspberry Pi 3b or Zero W 
 
+Start with:
 ```sh
 sudo apt-get purge chromium
 sudo apt-get autoremove
 sudo apt-get autoclean
 sudo apt-get install ofono
 ```
+
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:
 
@@ -27,10 +29,12 @@ to:
         <allow send_destination="org.ofono"/>
     </policy>
 
+
 Then:
 ```sh
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 ```
+
 
 In `src/modules/bluetooth/backend-native.c` and `src/modules/bluetooth/backend-ofono.c` change:
     
@@ -39,6 +43,7 @@ In `src/modules/bluetooth/backend-native.c` and `src/modules/bluetooth/backend-o
 to:
     
     *imtu = 60;
+
 
 Run the following:
 ```sh
@@ -52,6 +57,7 @@ Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
     .ifexists module-bluetooth-discover.so
     load-module module-bluetooth-discover autodetect_mtu=yes headset=ofono
     .endif
+
 
 For multi-user usage:
 ```sh
