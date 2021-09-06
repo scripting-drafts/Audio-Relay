@@ -27,7 +27,7 @@ to:
         <allow send_destination="org.ofono"/>
     </policy>
 
-
+Then:
 ```sh
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 ```
