@@ -6,11 +6,13 @@
 
 Requirements:
  - [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
- - Tested on Raspberry Pi 3b and Zero W
+ - Raspberry Pi 3b or Zero W 
 
-    sudo apt-get purge chromium
-    sudo apt-get autoremove
-    sudo apt-get autoclean
+```sh
+sudo apt-get purge chromium
+sudo apt-get autoremove
+sudo apt-get autoclean
+```
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:
 
@@ -25,7 +27,6 @@ to:
     </policy>
 
 
-Run:
 ```sh
 git clone -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 ```
@@ -38,7 +39,6 @@ to:
     
     *imtu = 60;
 
-Run:
 ```sh
 sudo apt-get build-dep pulseaudio
 cd pulseaudio
@@ -46,8 +46,10 @@ cd pulseaudio
 ```
 
 make services for:
+```sh
 systemctl enable --now ofono
 pulseaudio --start
+```
 
 Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
 
