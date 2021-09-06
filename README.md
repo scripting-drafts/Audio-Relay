@@ -55,6 +55,8 @@ Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
     load-module module-bluetooth-discover autodetect_mtu=yes headset=ofono
     .endif
 
+For multi-user usage:
+sudo apt-mark hold *
 
 ### Pending:
  - Make services for pulseaudio and ofono to run on boot:
