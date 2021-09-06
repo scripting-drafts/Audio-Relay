@@ -1,23 +1,14 @@
 # Audio-Relay
 
-#### HFP server with ffpeg tunneling
+### HFP server with ffpeg tunneling
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/scripting-drafts/Audio-Relay/)
 
 Runs on [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
 
-(Enable developer sources in the ``/etc/apt/sources.list`` file by commenting out the lines starting with ``deb-src``)
-
-Run:
-
-    sudo apt-get install pi-bluetooth ofono ninja (doxygen?)
-    (sudo -i
-    sudo pip3 install meson
-    exit
-    
-or just
-    
-    pip3 install meson)
+sudo apt-get purge chromium
+sudo apt-get autoremove
+sudo apt-get autoclean
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:
 
@@ -45,17 +36,25 @@ to:
     
     *imtu = 60;
 
-
 Run:
 ```sh
 sudo apt-get build-dep pulseaudio
-(sudo reboot)
 cd pulseaudio
 ./bootstrap.sh && make && sudo make install && ldconfig
 ```
 
-Optionally limit profiles to HFP only in `/etc/pulse/default.pa` by adding:
+make services for:
+systemctl enable --now ofono
+pulseaudio --start
+
+Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
 
     .ifexists module-bluetooth-discover.so
-    load-module module-bluetooth-discover headset=ofono
+    load-module module-bluetooth-discover autodetect_mtu=yes headset=ofono
     .endif
+
+
+### Pending:
+ - Lower output volume programatically
+ - Tunnel audio through ssh
+ - "logo.nologo" to the line in /boot/cmdline.txt
