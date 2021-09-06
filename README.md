@@ -8,9 +8,9 @@ Requirements:
  - [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
  - Tested on Raspberry Pi 3b and Zero W
 
-sudo apt-get purge chromium
-sudo apt-get autoremove
-sudo apt-get autoclean
+    sudo apt-get purge chromium
+    sudo apt-get autoremove
+    sudo apt-get autoclean
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:
 
