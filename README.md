@@ -59,7 +59,7 @@ sudo apt-mark hold *
 ```
 
 ### Pending:
- - Make services for pulseaudio and ofono to run on boot:
+ - Create services to run on boot:
 ```sh
 systemctl enable --now ofono
 pulseaudio --start
