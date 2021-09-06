@@ -12,6 +12,7 @@ Requirements:
 sudo apt-get purge chromium
 sudo apt-get autoremove
 sudo apt-get autoclean
+sudo apt-get install ofono
 ```
 
 In `/etc/dbus-1/system.d/ofono.conf` modify:
