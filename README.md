@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/scripting-drafts/Audio-Relay/)
 
-* Requirements:
+Requirements:
  - [Raspbian 10](https://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip) (32bit Debian Buster)
  - Tested on Raspberry Pi 3b and Zero W
 
