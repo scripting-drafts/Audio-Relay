@@ -1,6 +1,6 @@
 # Audio-Relay
 
-### HFP client with ffpeg tunneling
+### HFP client with ffmpeg tunneling
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/scripting-drafts/Audio-Relay/)
 
