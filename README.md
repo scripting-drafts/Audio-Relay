@@ -40,17 +40,14 @@ to:
     
     *imtu = 60;
 
+Run the following:
 ```sh
 sudo apt-get build-dep pulseaudio
 cd pulseaudio
 ./bootstrap.sh && make && sudo make install && ldconfig
 ```
 
-make services for:
-```sh
-systemctl enable --now ofono
-pulseaudio --start
-```
+*
 
 Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
 
@@ -60,6 +57,11 @@ Limit profiles to HFP only in `/usr/local/etc/pulse/default.pa` by adding:
 
 
 ### Pending:
- - Lower output volume programatically
+ - Make services for pulseaudio and ofono to run on boot:
+```sh
+systemctl enable --now ofono
+pulseaudio --start
+```
+ - Lower default output volume
  - Tunnel audio through ssh
  - "logo.nologo" to the line in /boot/cmdline.txt
